@@ -17,12 +17,28 @@ body {
   width: 100%;
   height: 6rem;
   background-color: var(--headerColor);
+  overflow: hidden;
 }
 .header .navbar {
   width: 80%;
   height: 100%;
   margin-left: auto;
+  display: flex;
   margin-right: auto;
+}
+.header .navbar .toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .navbar .toggle i {
+  color: var(--fontColor);
+}
+.header .navbar .logo {
+  width: 150px;
+}
+.header .navbar .logo img {
+  width: 100%;
 }
 .header .navbar .list_group {
   width: 100%;
@@ -32,7 +48,62 @@ body {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
+  list-style: none;
 }
 .header .navbar .list_group .list_item {
   color: var(--fontColor);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 550px) {
+  .header {
+    width: 100%;
+    height: 6rem;
+    background-color: var(--headerColor);
+    overflow: hidden;
+  }
+  .header .navbar {
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+  }
+  .header .navbar .toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .navbar .toggle i {
+    color: var(--fontColor);
+  }
+  .header .navbar .logo {
+    width: 150px;
+  }
+  .header .navbar .logo img {
+    width: 100%;
+  }
+  .header .navbar .list_group {
+    position: absolute;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style: none;
+  }
+  .header .navbar .list_group .list_item {
+    color: var(--fontColor);
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .header .navbar .toggle_list {
+    transform: translateX(0%);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -176,7 +176,7 @@ body {
     background-color: rgba(0, 0, 0, 0.723);
     padding: 0rem 0px 0px 0rem;
     position: absolute;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
     width: 100%;
     right: 0;
     top: 0;
@@ -187,7 +187,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     list-style: none;
-    z-index: -1;
+    z-index: 1;
   }
   .header .navbar .list_group .list_item {
     width: 100%;
@@ -204,6 +204,82 @@ body {
     transition: 0.3s;
   }
   .header .navbar .toggle_list {
-    transform: translateY(0%);
+    transform: translateX(0%);
+  }
+  .section_1 {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .section_1 .container {
+    width: 100%;
+    height: 18rem;
+    position: relative;
+  }
+  .section_1 .container .slider {
+    background-color: #EEEEEE;
+    position: relative;
+    padding: 20px 13px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .section_1 .container .slider ul {
+    display: flex;
+    width: 80%;
+    transition: 1s;
+  }
+  .section_1 .container .slider ul li {
+    display: inline-block;
+    padding: 10px 1.2rem;
+  }
+  .section_1 .container .slider ul li img {
+    width: 57vw;
+    height: 13.5rem;
+  }
+  .section_1 .container .arrow {
+    position: absolute;
+    top: 15px;
+    height: 100%;
+    width: 14%;
+    margin-top: -15px;
+    padding: 0;
+    background: transparent;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 70px;
+    color: #444;
+  }
+  .section_1 .container .arrow.right {
+    right: 2px;
+    transition: 1s;
+    transform: translateX(100%);
+  }
+  .section_1 .container .arrow.left {
+    left: 2px;
+    transition: 1s;
+    transform: translateX(-100%);
+  }
+  .section_1 .container .arrow:focus {
+    outline: none;
+  }
+  .section_1 .container .arrow:hover {
+    background: #ccc;
+    cursor: pointer;
+  }
+  .section_1 .container:hover .right {
+    right: 2px;
+    transform: translateX(0%);
+    transition: 1s;
+  }
+  .section_1 .container:hover .left {
+    left: 2px;
+    transition: 1s;
+    transform: translateX(0%);
   }
 }/*# sourceMappingURL=style.css.map */

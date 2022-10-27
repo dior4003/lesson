@@ -21,24 +21,25 @@ let li =document.querySelectorAll("#ul li");
 let leftBtn = document.querySelector('#left');
 let rightBtn = document.querySelector('#right');
 let score = 0;
+let width = li[0].clientWidth
 
 
 
 leftBtn.addEventListener('click', ()=>{
-    if((li.length-2)*84+score<0){
+    if((li.length-2)*width+score<0){
         score=0
-        ul.style.marginLeft=`${score}rem`;
+        ul.style.marginLeft=`${score}px`;
     }else{
-        ul.style.marginLeft=`${score-=82}rem`;
+        ul.style.marginLeft=`${score-=width}px`;
     }
     
 });
 rightBtn.addEventListener('click', ()=>{
-    if((li.length-2)*84+score>0){
+    if((li.length-2)*width+score>0){
         score=0
-        ul.style.marginLeft=`${score}rem`;
+        ul.style.marginLeft=`${score}px`;
     }else{
-        ul.style.marginLeft=`${score+=82}rem`;
+        ul.style.marginLeft=`${score+=width}px`;
     }
     
 });

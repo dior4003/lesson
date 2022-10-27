@@ -59,73 +59,78 @@ body {
 .section_1 {
   width: 100%;
   margin-top: 20px;
+  overflow: hidden;
 }
 .section_1 .container {
   width: 100%;
-  height: 36rem;
+  height: 45rem;
   position: relative;
 }
-.section_1 .container .corusel {
+.section_1 .container .slider {
+  background-color: #EEEEEE;
+  position: relative;
+  padding: 20px 13px;
+  border: 1px solid #CCCCCC;
+  border-radius: 15px;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-.section_1 .container .corusel .corusel_item {
-  width: 100%;
-  height: 36rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section_1 .container .corusel .corusel_item img {
-  width: 68rem;
   height: 100%;
+  overflow-x: hidden;
 }
-.section_1 .container .left {
+.section_1 .container .slider ul {
+  display: flex;
+  width: 80%;
+  transition: 1s;
+}
+.section_1 .container .slider ul li {
+  display: inline-block;
+  padding: 10px 1rem;
+}
+.section_1 .container .slider ul li img {
+  width: 80rem;
+  height: 40.5rem;
+}
+.section_1 .container .arrow {
   position: absolute;
-  top: 30%;
-  left: 100px;
-}
-.section_1 .container .left .left_btn {
-  padding: 16px;
-  font-size: 15px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
-  outline: none;
+  top: 15px;
+  height: 100%;
+  width: 14%;
+  margin-top: -15px;
+  padding: 0;
+  background: transparent;
+  border-radius: 15px;
   border: none;
-  border-radius: 50%;
-  opacity: 0;
-  transition: 0.3s;
-}
-.section_1 .container .right {
-  position: absolute;
-  top: 30%;
-  right: 100px;
-}
-.section_1 .container .right .right_btn {
-  transition: 0.3s;
-  padding: 16px;
-  font-size: 15px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
   outline: none;
-  border: none;
-  border-radius: 50%;
-  opacity: 0;
+  font-size: 70px;
+  color: #444;
 }
-.section_1 .container:hover .left .left_btn {
-  opacity: 1;
-  transition: 0.3s;
-  left: 50px;
+.section_1 .container .arrow.right {
+  right: 2px;
+  transition: 1s;
+  transform: translateX(100%);
 }
-.section_1 .container:hover .right .right_btn {
-  opacity: 1;
-  transition: 0.3s;
-  right: 50px;
+.section_1 .container .arrow.left {
+  left: 2px;
+  transition: 1s;
+  transform: translateX(-100%);
+}
+.section_1 .container .arrow:focus {
+  outline: none;
+}
+.section_1 .container .arrow:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+.section_1 .container:hover .right {
+  right: 2px;
+  transform: translateX(0%);
+  transition: 1s;
+}
+.section_1 .container:hover .left {
+  left: 2px;
+  transition: 1s;
+  transform: translateX(0%);
 }
 
 @media (max-width: 550px) {

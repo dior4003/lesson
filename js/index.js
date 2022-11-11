@@ -120,7 +120,11 @@ const tracks = [
     cover: 'https://www.bensound.com/bensound-img/highoctane.jpg'
   }
 ];
+
+
 const player = document.querySelector('.player');
+
+
 const audio = player.querySelector('.player__audio');
 const audioSource = audio.querySelector('source');
 const songPanel = player.querySelector('.song-panel');
@@ -176,12 +180,10 @@ const stopSpin = () => {
     once: true
   });
 };
-
 const handleProgress = () => {
   // Update the progress bar.
   const percent = (audio.currentTime / audio.duration) * 100;
   progressBar.style.flexBasis = `${percent}%`;
-  
   // Skip to next track if at the end of the song.
   if (percent === 100) {
     trackSwitch = true;
@@ -249,3 +251,33 @@ progress.addEventListener('click', scrub);
 progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
+
+
+
+let youtube = [
+  `<iframe width="560" height="315" src="https://www.youtube.com/embed/V1Pl8CzNzCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+  `<iframe width="560" height="315" src="https://www.youtube.com/embed/OErtsGyKXgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+  `<iframe width="560" height="315" src="https://www.youtube.com/embed/XDR8_OEY7xE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+  `<iframe width="560" height="315" src="https://www.youtube.com/embed/S_xH7noaqTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+  `<iframe width="560" height="315" src="https://www.youtube.com/embed/S_xH7noaqTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+  `<iframe width="560" height="315" src="https://www.youtube.com/embed/VjYHGrZuhyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+  `<iframe width="560" height="315" src="https://www.youtube.com/embed/VbfpW0pbvaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+];
+
+function createMenuItem(name) {
+  let div = document.createElement( 'div' );
+  div.classList.add( "content" );
+  div.innerHTML = name;
+  return div;
+}
+
+
+youtube.map( item => {
+  document.querySelector( "#row" ).appendChild(createMenuItem( item ))
+} )
+
+
+document.querySelector( ".close" ).addEventListener( "click", () => {
+  document.querySelector("#player").style.display="none"
+})
+

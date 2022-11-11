@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="video_bg">
-       <video src="./2_5404676292828209361.mp4" autoplay muted>
+       <video src="./2_5404676292828209361.mp4" autoplay muted loop>
 
        </video>
     </div>
@@ -55,6 +55,9 @@
             <button id="left" class="arrow right">⇨</button>
         </div>
     </section>
+    <audio src="./2_5404676292828209361.mp4">
+      <source src="./2_5404676292828209361.mp4" type="audio/mp4">
+    </audio>
     <section id="player">
         <div class="close">
             <i class="bi bi-x"></i>
@@ -64,7 +67,7 @@
               <source src="https://www.bensound.com/bensound-music/bensound-ukulele.mp3" type="audio/mpeg" data-trackid="1">
               Your browser does not support the audio element.
             </audio>
-            <div class="song-panel">
+            <div class="song-panel ">
               <div class="song-info">
                 <div class="song-info__title">Ukulele</div>
                 <div class="song-info__artist">Bensound</div>
@@ -79,13 +82,13 @@
                   <div class="center__disc"></div>
                 </div>
               </div>
-              <button class="backward"><i class="fas fa-backward fa-2x"></i></button>
+              <button class="backward"><i class="bi bi-skip-backward-circle"></i></button>
               <button class="play">
                 <i class="bi fs-2 bi-play-circle-fill"></i>
                 <span class="pause left"></span>
                 <span class="pause right"></span>
               </button>
-              <button class="forward"><i class="fas fa-forward fa-2x"></i></button>
+              <button class="forward"><i class="bi bi-skip-forward-circle"></i></button>
             </div>
           </div>
     </section>
@@ -95,6 +98,15 @@
         <div class="headers">
           <h1>PlayList</h1>
         </div>
+      </div>
+    </section>
+    <section id="youtube">
+      <div id="row" class="row">
+        <!-- <div class="content">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/V1Pl8CzNzCw" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div> -->
       </div>
     </section>
 

@@ -209,7 +209,26 @@
   font-size: 18px;
 }
 #player{
-  display: none;
+  position: fixed;
+  width: 100%;
+  bottom: 10px;
+  z-index: 9999;
+  .close{
+    padding: 20px;
+    background-color: crimson;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    i{
+      font-size: 30px;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
   .player {
     display: flex;
     align-items: center;
@@ -414,15 +433,47 @@
   .line{
     width: 99%;
     height: 9rem;
-    background-color: #ccc;
+    background-color: #444;
+    .headers{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h1{
+        font-size: 40px;
+        color: #fff;
+      }
+    }
   }
 }
+
+#youtube{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  .row{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .content{
+      padding: 10px 8px 10px 8px;
+      margin-top: 20px;
+      background-color: #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+}
+
+
 @keyframes backgrounds {
   0%{
     background-position-x: 0;
   }
   100%{
-    background-position-x: 100%;
+    background-position-x: 200vh;
   }
 }
 
